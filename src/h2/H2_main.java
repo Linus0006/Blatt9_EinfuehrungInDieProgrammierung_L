@@ -8,7 +8,7 @@ public class H2_main {
         Passenger passenger1 = new Passenger("Mr. A.", 2, true);
         Passenger passenger2 = new Passenger("Mr. B.", 3, true);
         Passenger passenger3 = new Passenger("Mrs. C.", 5, true);
-        Passenger passenger4 = new Passenger("Ms. D.", 3, false);
+        Passenger passenger4 = new Passenger("Ms. D.", 9, false);
         Passenger passenger5 = new Passenger("Mr. D.", 4, true);
         Passenger passenger6 = new Passenger("Mr. E.", 3, false);
         Passenger passenger7 = new Passenger("Mrs. F.", 5, false);
@@ -30,7 +30,7 @@ public class H2_main {
         System.out.println("Check3: ");
         firstBus.listPassengersInBus();
 
-        firstBus.nextStop(new Passenger[] { passenger3, passenger4, passenger5 });
+        firstBus.nextStop(new Passenger[] {passenger4,passenger3,passenger8});
 
         System.out.println("Check4: ");
         firstBus.listPassengersInBus();
@@ -41,13 +41,13 @@ public class H2_main {
         firstBus.listPassengersInBus();
 
         // Ticket control
-        firstBus.findPassengersWithoutTickets();
+        //firstBus.findPassengersWithoutTickets();
 
         System.out.println("Check6: ");
         firstBus.listPassengersInBus();
 
         firstBus.nextStop();
-        firstBus.transferPassengers(secondBus, new String[] { "Mr. D.", "Ms. D."} );
+        firstBus.transferPassengers(secondBus, new String[] { "Ms. D.", "Ms. D."} );
         System.out.print("Check 2nd Bus: ");
         secondBus.listPassengersInBus();
 
@@ -66,7 +66,9 @@ public class H2_main {
         System.out.println("Check9: ");
         firstBus.listPassengersInBus();
 
-        firstBus.enterBus(passenger8);
+        firstBus.enterBus(passenger9);
+        System.out.println("Check9.5: ");
+        firstBus.listPassengersInBus();
 
         firstBus.nextStop();
 

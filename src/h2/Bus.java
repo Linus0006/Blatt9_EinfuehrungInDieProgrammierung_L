@@ -1,10 +1,11 @@
 package h2;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Bus {
 
-    private ArrayList<Passenger> passengers;
+    public ArrayList<Passenger> passengers;
 
     public Bus () {
         this.passengers = new ArrayList<>();
@@ -76,7 +77,7 @@ public class Bus {
             int i = 0;
             found = false;
             while (i < passengerNames.length) {
-                if (p.getName() == passengerNames[i]) {
+                if (Objects.equals(p.getName(), passengerNames[i])) {
                     passengers.remove(j);
                     otherBus.enterBus(p);
                     found = true;
